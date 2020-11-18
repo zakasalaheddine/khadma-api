@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Company"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "numberOfEmployees": {
+      "type": "string"
+    },
+    "emplyees": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "company"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "myCompany"
+    }
+  }
+}

@@ -63,6 +63,14 @@
     "username": {
       "type": "string",
       "required": true
+    },
+    "company": {
+      "via": "emplyees",
+      "model": "company"
+    },
+    "myCompany": {
+      "via": "owner",
+      "model": "company"
     }
   }
 }
